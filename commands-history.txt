@@ -1,0 +1,4 @@
+composer create-project laravel/laravel lrvlApiTest
+
+// php artisan tinker commands
+DB::listen(function($query) { var_dump($query->sql); });// gives back sql query for each db request with results.
