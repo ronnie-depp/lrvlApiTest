@@ -66,29 +66,51 @@ class Users extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function show($id)//, Request $request
+    public function show($id, Request $request)//
     {
         //return (['request->expectsJson()' =>$request->expectsJson()]);//false
         //return (['request->is()' =>$request->is('api/v1*')]);
+
+        //join-ed in to one single response
+        $joined = User::join('locations', 'locations.user_id', '=', 'users.id')
+                        ->join('loc_cities', 'locations.city_id', '=', 'loc_cities.id')
+                        ->join('loc_countries', 'loc_cities.country_id', '=', 'loc_countries.id')
+                        ->select('users.*', 'locations.*', 'loc_cities.*', 'loc_countries.*')
+                        ->where('users.id', $id)
+                        ->first();
+        //get location info
         $location = Location::where('user_id', $id)->limit(1)->first();
         $city_id = $location->city_id;
+        //get city
         $city = \App\City::where('id', $city_id)->limit(1)->first();
         $country_id = $city->country_id;
-        $country = \App\Country::where('id', $country_id)->limit(1)->value('country');
+        //get country
+        $country = \App\Country::where('id', $country_id)->limit(1)->first();/*->value('country');*/
+        //get the user
         $user = User::findOrFail($id);
-        //$user->location = $location;
+        $user->location = $location;
+        $user->location->city = $city;
+        $user->location->city->country = $country;
+        //specifics
         $loc = new \stdClass();
         $loc->street_address = $location->street_address;
         $loc->city = $city->city;
         $loc->country = $country;
         $user->location = $loc;
         // unset all variables used
-        unset($location, $city_id, $city, $country_id, $country, $loc);
-        
+        unset($location, $city_id, $city, $country_id, $country, $loc);/**/
+
         // if API request, serve JSON
         if (Route::getCurrentRoute()->getPrefix()=='api/v1') {//$request->ajax() || $request->isJson()
             
-            return (['user' => $user, 'responseType' => 'json', 'requestType' => 'API call', 'status' => 200]);
+            if($request->headers->get('Content-Type')=="application/json"){// json
+                return (['user' => $joined]);
+                //return (['user' => $user, 'responseType' => 'json', 'requestType' => 'API call', 'status' => 200]);
+            } elseif ($request->headers->get('Content-Type')=="application/xml") {// xml
+                return response()->xml(['user' => $joined]);//$user
+            } else {//web call, return view, text/html
+                return (['user' => $user, 'responseType' => 'text/html, web-view', 'status' => 200]);/*['fullname']*/
+            }
             
         } else {// serve view
             
