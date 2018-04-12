@@ -27,6 +27,7 @@ final class Versions
   'egulias/email-validator' => '2.1.3@1bec00a10039b823cc94eef4eddd47dcd3b2ca04',
   'erusev/parsedown' => '1.7.1@92e9c27ba0e74b8b028b111d1b6f956a15c01fc1',
   'fideloper/proxy' => '4.0.0@cf8a0ca4b85659b9557e206c90110a6a4dba980a',
+  'jailtonsc/laravel-response-xml' => 'v2.1@f9de7be32f55b6d2eed0fef93771ad0c48ac038a',
   'jakub-onderka/php-console-color' => '0.1@e0b393dacf7703fc36a4efc3df1435485197e6c1',
   'jakub-onderka/php-console-highlighter' => 'v0.3.2@7daa75df45242c8d5b75a22c00a201e7954e4fb5',
   'laravel-doctrine/acl' => '1.0.16@6d1095ae301147df4074df747fa6d6b9bd37aa68',
@@ -105,7 +106,7 @@ final class Versions
   'sebastian/version' => '2.0.1@99732be0ddb3361e16ad77b68ba41efc8e979019',
   'theseer/tokenizer' => '1.1.0@cb2f008f3f05af2893a87208fe6a6c4985483f8b',
   'webmozart/assert' => '1.3.0@0df1908962e7a3071564e857d86874dad1ef204a',
-  'laravel/laravel' => 'No version set (parsed as 1.0.0)@',
+  'laravel/laravel' => 'dev-master@310564bd343eb104580da411157bc60b872b24e3',
 );
 
     private function __construct()

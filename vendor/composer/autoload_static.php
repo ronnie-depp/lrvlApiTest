@@ -31,6 +31,7 @@ class ComposerStaticInit29496a79c52d23194feb4c859ab41976
         ),
         'X' => 
         array (
+            'XmlResponse\\' => 12,
             'XdgBaseDir\\' => 11,
         ),
         'W' => 
@@ -151,6 +152,10 @@ class ComposerStaticInit29496a79c52d23194feb4c859ab41976
         'Zend\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
+        'XmlResponse\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jailtonsc/laravel-response-xml/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -5094,6 +5099,9 @@ class ComposerStaticInit29496a79c52d23194feb4c859ab41976
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'XmlResponse\\Exception\\XmlResponseException' => __DIR__ . '/..' . '/jailtonsc/laravel-response-xml/src/Exception/XmlResponseException.php',
+        'XmlResponse\\XmlResponse' => __DIR__ . '/..' . '/jailtonsc/laravel-response-xml/src/XmlResponse.php',
+        'XmlResponse\\XmlResponseServiceProvider' => __DIR__ . '/..' . '/jailtonsc/laravel-response-xml/src/XmlResponseServiceProvider.php',
         'Zend\\Code\\Annotation\\AnnotationCollection' => __DIR__ . '/..' . '/zendframework/zend-code/src/Annotation/AnnotationCollection.php',
         'Zend\\Code\\Annotation\\AnnotationInterface' => __DIR__ . '/..' . '/zendframework/zend-code/src/Annotation/AnnotationInterface.php',
         'Zend\\Code\\Annotation\\AnnotationManager' => __DIR__ . '/..' . '/zendframework/zend-code/src/Annotation/AnnotationManager.php',

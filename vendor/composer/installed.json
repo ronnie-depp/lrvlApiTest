@@ -5647,5 +5647,43 @@
             "migrations",
             "orm"
         ]
+    },
+    {
+        "name": "jailtonsc/laravel-response-xml",
+        "version": "v2.1",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jailtonsc/laravel-response-xml.git",
+            "reference": "f9de7be32f55b6d2eed0fef93771ad0c48ac038a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jailtonsc/laravel-response-xml/zipball/f9de7be32f55b6d2eed0fef93771ad0c48ac038a",
+            "reference": "f9de7be32f55b6d2eed0fef93771ad0c48ac038a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.9"
+        },
+        "time": "2018-03-18T14:34:43+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "XmlResponse\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Add the method xml integrating the laravel's response, converting eloquent return to XML.",
+        "keywords": [
+            "eloquent",
+            "laravel",
+            "response",
+            "xml"
+        ]
     }
 ]
