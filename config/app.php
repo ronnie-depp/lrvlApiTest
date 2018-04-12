@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        XmlResponse\XmlResponseServiceProvider::class,
 
         /*
          * Application Service Providers...
