@@ -13,11 +13,11 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
-  'nunomaduro/collision' => 
+  'laravel-doctrine/migrations' => 
   array (
     'providers' => 
     array (
-      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+      0 => 'LaravelDoctrine\\Migrations\\MigrationsServiceProvider',
     ),
   ),
   'laravel-doctrine/orm' => 
@@ -33,11 +33,11 @@
       'EntityManager' => 'LaravelDoctrine\\ORM\\Facades\\EntityManager',
     ),
   ),
-  'laravel-doctrine/migrations' => 
+  'nunomaduro/collision' => 
   array (
     'providers' => 
     array (
-      0 => 'LaravelDoctrine\\Migrations\\MigrationsServiceProvider',
+      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
 );
