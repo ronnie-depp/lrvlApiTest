@@ -1,0 +1,2 @@
+//provision free plan postgresql database on current project
+heroku addons:create heroku-postgresql:hobby-dev

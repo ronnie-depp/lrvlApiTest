@@ -2,3 +2,6 @@ composer create-project laravel/laravel lrvlApiTest
 
 // php artisan tinker commands
 DB::listen(function($query) { var_dump($query->sql); });// gives back sql query for each db request with results.
+
+//set heroku remote repository to push/deploy to a Heroku app
+heroku git:remote -a arcane-bayou-88579
