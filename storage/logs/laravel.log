@@ -1599,3 +1599,634 @@
 #46 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #47 {main}
 "} 
+[2018-04-13 12:59:22] local.ERROR: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'location_id' (SQL: alter table `users` add `location_id` int unsigned not null) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'location_id' (SQL: alter table `users` add `location_id` int unsigned not null) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'location_id' at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'location_id' at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('users', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2018_04_13_125211_alter_users_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): AlterUsersTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(AlterUsersTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 6, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-04-13 13:00:59] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`lrvlapitest`.`#sql-754_1d`, CONSTRAINT `users_location_id_foreign` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE) (SQL: alter table `users` add constraint `users_location_id_foreign` foreign key (`location_id`) references `locations` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`lrvlapitest`.`#sql-754_1d`, CONSTRAINT `users_location_id_foreign` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE) (SQL: alter table `users` add constraint `users_location_id_foreign` foreign key (`location_id`) references `locations` (`id`) on delete cascade) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`lrvlapitest`.`#sql-754_1d`, CONSTRAINT `users_location_id_foreign` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`lrvlapitest`.`#sql-754_1d`, CONSTRAINT `users_location_id_foreign` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('users', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2018_04_13_125211_alter_users_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): AlterUsersTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(AlterUsersTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 6, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-04-13 17:53:22] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `password_resets_email_index`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `password_resets_email_index`(`email`)) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('password_resets', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php(20): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreatePasswordResetsTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePasswordResetsTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:05:42] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email_PWD_RESETS`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email_PWD_RESETS`(`email`)) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('password_resets', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreatePasswordResetsTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePasswordResetsTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:06:29] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email_PwdResets`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email_PwdResets`(`email`)) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('password_resets', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreatePasswordResetsTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePasswordResetsTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:07:13] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email_PWD`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email_PWD`(`email`)) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('password_resets', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreatePasswordResetsTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePasswordResetsTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:07:36] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email`(`email`)) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('password_resets', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreatePasswordResetsTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePasswordResetsTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:07:59] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `password_resets` add index `IDX_email`(`email`)) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `pa...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `pa...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `pa...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('password_resets', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2014_10_12_100000_create_password_resets_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreatePasswordResetsTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePasswordResetsTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:15:03] local.ERROR: Class 'App\Providers\Schema' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\Providers\\Schema' not found at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\app\\Providers\\AppServiceProvider.php:16)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AppServiceProvider->boot()
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(794): Illuminate\\Container\\Container->call(Array)
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(777): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 18)
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(778): array_walk(Array, Object(Closure))
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(206): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(297): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2018-04-13 18:15:58] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_24` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `users` add constraint `users_location_id_foreign` foreign key (`location_id`) references `locations` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_24` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `users` add constraint `users_location_id_foreign` foreign key (`location_id`) references `locations` (`id`) on delete cascade) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_24` (errno: 150 \"Foreign key constraint is incorrectly formed\") at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_24` (errno: 150 \"Foreign key constraint is incorrectly formed\") at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2018_03_25_125038_create_users_table.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateUsersTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:24:35] local.ERROR: Command "make:migation" is not defined.
+
+Did you mean one of these?
+    doctrine:migrations:diff
+    doctrine:migrations:execute
+    doctrine:migrations:generate
+    doctrine:migrations:latest
+    doctrine:migrations:migrate
+    doctrine:migrations:refresh
+    doctrine:migrations:reset
+    doctrine:migrations:rollback
+    doctrine:migrations:status
+    doctrine:migrations:version
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migation\" is not defined.
+
+Did you mean one of these?
+    doctrine:migrations:diff
+    doctrine:migrations:execute
+    doctrine:migrations:generate
+    doctrine:migrations:latest
+    doctrine:migrations:migrate
+    doctrine:migrations:refresh
+    doctrine:migrations:reset
+    doctrine:migrations:rollback
+    doctrine:migrations:status
+    doctrine:migrations:version
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php:611)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->find('make:migation')
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-04-13 18:25:31] local.ERROR: Command "make:migation" is not defined.
+
+Did you mean one of these?
+    doctrine:migrations:diff
+    doctrine:migrations:execute
+    doctrine:migrations:generate
+    doctrine:migrations:latest
+    doctrine:migrations:migrate
+    doctrine:migrations:refresh
+    doctrine:migrations:reset
+    doctrine:migrations:rollback
+    doctrine:migrations:status
+    doctrine:migrations:version
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migation\" is not defined.
+
+Did you mean one of these?
+    doctrine:migrations:diff
+    doctrine:migrations:execute
+    doctrine:migrations:generate
+    doctrine:migrations:latest
+    doctrine:migrations:migrate
+    doctrine:migrations:refresh
+    doctrine:migrations:reset
+    doctrine:migrations:rollback
+    doctrine:migrations:status
+    doctrine:migrations:version
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php:611)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->find('make:migation')
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-04-13 18:28:19] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_25` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `articles` add constraint `articles_author_foreign` foreign key (`author`) references `users` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_25` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `articles` add constraint `articles_author_foreign` foreign key (`author`) references `users` (`id`) on delete cascade) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_25` (errno: 150 \"Foreign key constraint is incorrectly formed\") at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:143, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `lrvlapitest`.`#sql-754_25` (errno: 150 \"Foreign key constraint is incorrectly formed\") at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOStatement.php:141)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `ar...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `ar...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('alter table `ar...')
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('articles', Object(Closure))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\database\\migrations\\2018_04_02_233947_create_articles_table.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(359): CreateArticlesTable->up()
+#8 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateArticlesTable), 'up')
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\xampp-7.1.7-...', 1, false)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(45): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(252): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2018-04-13 18:56:44] local.ERROR: There are no commands defined in the "seed:" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): There are no commands defined in the \"seed:\" namespace. at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php:557)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(597): Symfony\\Component\\Console\\Application->findNamespace('seed:')
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(224): Symfony\\Component\\Console\\Application->find('seed::database')
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2018-04-13 18:58:01] local.ERROR: Not enough arguments (missing: "name"). {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Not enough arguments (missing: \"name\"). at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Input\\Input.php:76)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Command\\Command.php(247): Symfony\\Component\\Console\\Input\\Input->validate()
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(865): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(241): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeederMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\symfony\\console\\Application.php(143): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2018-04-13 21:02:50] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `locations` where `user_id` = 4 limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' (SQL: select * from `locations` where `user_id` = 4 limit 1) at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, Doctrine\\DBAL\\Driver\\PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:82, PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause' at D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:80)
+[stacktrace]
+#0 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1854): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1839): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(483): Illuminate\\Database\\Query\\Builder->get(Array)
+#5 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(467): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#6 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(77): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#7 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\app\\Http\\Controllers\\Users.php(96): Illuminate\\Database\\Eloquent\\Builder->first()
+#8 [internal function]: App\\Http\\Controllers\\Users->show('4', Object(Illuminate\\Http\\Request))
+#9 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#10 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('show', Array)
+#11 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(212): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\Users), 'show')
+#12 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(169): Illuminate\\Routing\\Route->runController()
+#13 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Route->run()
+#14 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#15 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#19 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#20 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(661): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#23 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#24 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(602): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#25 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(591): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#26 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#27 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(30): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#38 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(46): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(149): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#44 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#45 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#46 D:\\xampp-7.1.7-vc14\\htdocs\\lrvlApiTest\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#47 {main}
+"} 

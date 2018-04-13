@@ -4,20 +4,25 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
-{
+class CreateUsersTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        if(Schema::hasTable('users')== FALSE)
-        {
+    public function up() {
+        if (Schema::hasTable('users') == FALSE) {
             Schema::create('users', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('fullname');
+                $table->string('name');
+                $table->string('email')->unique();
+                $table->string('password');
+                $table->rememberToken();
+                $table->timestamps();
+                $table->softDeletes();
+                $table->unsignedInteger('location_id');
+                $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
             });
         }
     }
@@ -27,8 +32,12 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
+        Schema::table('locations', function (Blueprint $table) {
+            $table->dropForeign(['location_id']);//'users_location_id_foreign'
+            $table->dropColumn('location_id');
+        });
         Schema::dropIfExists('users');
     }
+
 }
