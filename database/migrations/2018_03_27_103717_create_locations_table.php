@@ -15,6 +15,7 @@ class CreateLocationsTable extends Migration
     {
         if(Schema::hasTable('locations')== FALSE)
         {
+            Schema::disableForeignKeyConstraints();
             Schema::create('locations', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('street_address', 255);

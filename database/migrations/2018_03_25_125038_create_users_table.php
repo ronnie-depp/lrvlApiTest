@@ -12,6 +12,7 @@ class CreateUsersTable extends Migration {
      * @return void
      */
     public function up() {
+        Schema::disableForeignKeyConstraints();
         if (Schema::hasTable('users') == FALSE) {
             Schema::create('users', function (Blueprint $table) {
                 $table->increments('id');

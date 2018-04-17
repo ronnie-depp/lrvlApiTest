@@ -15,6 +15,7 @@ class CreateArticlesTable extends Migration
     {
         if(Schema::hasTable('articles')== FALSE)
         {
+            Schema::disableForeignKeyConstraints();
             Schema::create('articles', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('title');//->unique();

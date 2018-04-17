@@ -15,6 +15,7 @@ class CreateLocCountriesTable extends Migration
     {
         if(Schema::hasTable('loc_countries')== FALSE)
         {
+            Schema::disableForeignKeyConstraints();
             Schema::create('loc_countries', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('country', 255);
