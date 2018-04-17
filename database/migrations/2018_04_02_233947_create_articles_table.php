@@ -25,6 +25,7 @@ class CreateArticlesTable extends Migration
                 $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
             });
         }
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
