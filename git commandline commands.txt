@@ -4,3 +4,14 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/ronnie-depp/lrvlApiTest.git
 git push -u origin master
+
+/////////////////////////////////////////////////////////////////////////////
+//// Remove a File or Directory from Remote Repository while keep it locally
+//
+//For single file:
+
+git rm --cached mylogfile.log
+
+//For single directory:
+
+git rm --cached -r mydirectory

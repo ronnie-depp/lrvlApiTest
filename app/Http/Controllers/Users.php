@@ -126,13 +126,13 @@ Islamabad   1               Pakistan
             } elseif ($request->headers->get('Content-Type')=="application/xml") {// xml
                 return response()->xml(['user' => $joined]);//$user
             } else {//web call, return view, text/html
-                return (['user' => $user, 'responseType' => 'text/html, web-view', 'status' => 200]);/*['fullname']*/
+                return (['user' => $joined, 'responseType' => 'text/html, web-view', 'status' => 200]);/*['fullname']*/
             }
             
         } else {// serve view
             
             //web call, return view
-            return (['user' => $user, 'responseType' => 'text/html, web-view', 'status' => 200]);/*['fullname']*/
+            return (['user' => $joined, 'responseType' => 'text/html, web-view', 'status' => 200]);/*['fullname']*/
             
         }
     }

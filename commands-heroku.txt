@@ -1,2 +1,30 @@
 //provision free plan postgresql database on current project
 heroku addons:create heroku-postgresql:hobby-dev
+
+git add .
+// or
+git add * -f
+// or
+git add filename.ext
+// or
+git add directory_name/dir
+// or git add directory_name/dir/filename.ext
+
+git commit -m "migrate: disable/enable foreign-key checks."
+
+git push heroku master
+
+heroku run php artisan vendor:publish --tag="config"
+
+heroku run php artisan migrate
+
+/////////////////////////////////////////////////////////////////////////////
+//// Remove a File or Directory from Remote Repository while keep it locally
+//
+//For single file:
+
+git rm --cached mylogfile.log
+
+//For single directory:
+
+git rm --cached -r mydirectory
