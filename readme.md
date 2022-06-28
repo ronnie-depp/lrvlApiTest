@@ -1,4 +1,6 @@
 # API Test (Laravel 5.6.40)
+
+### MVC Pattern used.
 <img src="lrvlApiTest_home.png">
 - http://localhost:1920/
 
