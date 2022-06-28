@@ -1,0 +1,15 @@
+tools:
+  external_code_coverage:
+    timeout: 600
+    runs: 4
+build:
+    environment:
+        variables:
+            XDEBUG_MODE: 'coverage'
+    tests:
+        override:
+            -
+                command: 'vendor/bin/phpunit --coverage-clover=phpunit-coverage.xml'
+                coverage:
+                    file: 'phpunit-coverage.xml'
+                    format: 'php-clover'

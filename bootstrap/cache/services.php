@@ -24,9 +24,9 @@
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
     22 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    23 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    24 => 'LaravelDoctrine\\Migrations\\MigrationsServiceProvider',
-    25 => 'LaravelDoctrine\\ORM\\DoctrineServiceProvider',
+    23 => 'LaravelDoctrine\\Migrations\\MigrationsServiceProvider',
+    24 => 'LaravelDoctrine\\ORM\\DoctrineServiceProvider',
+    25 => 'Laravel\\Tinker\\TinkerServiceProvider',
     26 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     27 => 'XmlResponse\\XmlResponseServiceProvider',
     28 => 'App\\Providers\\AppServiceProvider',
@@ -118,6 +118,7 @@
     'command.model.make' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
     'command.notification.make' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
     'command.notification.table' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
+    'command.observer.make' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
     'command.policy.make' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
     'command.provider.make' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
     'command.queue.failed-table' => 'Illuminate\\Foundation\\Providers\\ConsoleSupportServiceProvider',
@@ -154,8 +155,8 @@
     'translation.loader' => 'Illuminate\\Translation\\TranslationServiceProvider',
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
-    'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
     'LaravelDoctrine\\Migrations\\Configuration\\ConfigurationProvider' => 'LaravelDoctrine\\Migrations\\MigrationsServiceProvider',
+    'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
   ),
   'when' => 
@@ -196,10 +197,10 @@
     'Illuminate\\Validation\\ValidationServiceProvider' => 
     array (
     ),
-    'Laravel\\Tinker\\TinkerServiceProvider' => 
+    'LaravelDoctrine\\Migrations\\MigrationsServiceProvider' => 
     array (
     ),
-    'LaravelDoctrine\\Migrations\\MigrationsServiceProvider' => 
+    'Laravel\\Tinker\\TinkerServiceProvider' => 
     array (
     ),
     'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => 

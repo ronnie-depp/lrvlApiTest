@@ -1,0 +1,30 @@
+<?php
+
+namespace <namespace>;
+
+use Doctrine\Migrations\AbstractMigration;
+use Doctrine\DBAL\Schema\Schema as Schema;
+use LaravelDoctrine\Migrations\Schema\Table;
+use LaravelDoctrine\Migrations\Schema\Builder;
+
+class <class> extends AbstractMigration
+{
+    /**
+     * @param Schema $schema
+     */
+    public function up(Schema $schema)
+    {
+        (new Builder($schema))->create('<table>', function (Table $table) {
+            $table->increments('id');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * @param Schema $schema
+     */
+    public function down(Schema $schema)
+    {
+        (new Builder($schema))->drop('<table>');
+    }
+}

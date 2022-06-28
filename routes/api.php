@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
-//Use App\Article;
+
+use Illuminate\Support\Facades\Route;
+use App\Article;
 
 /*
 |--------------------------------------------------------------------------

@@ -21,6 +21,7 @@ SET time_zone = "+05:00";
 --
 -- Database: `lrvlapitest`
 --
+CREATE DATABASE IF NOT EXISTS `lrvlapitest` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `lrvlapitest`;
 
 -- --------------------------------------------------------
@@ -29,7 +30,7 @@ USE `lrvlapitest`;
 -- Table structure for table `migrations`
 --
 
-CREATE TABLE `migrations` (
+CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
@@ -39,13 +40,13 @@ CREATE TABLE `migrations` (
 -- Dumping data for table `migrations`
 --
 
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_100000_create_password_resets_table', 1),
-(2, '2018_03_29_145704_create_loc_countries_table', 1),
-(3, '2018_03_29_145323_create_loc_cities_table', 2),
-(4, '2018_03_27_103717_create_locations_table', 3),
-(5, '2018_03_25_125038_create_users_table', 4),
-(6, '2018_04_02_233947_create_articles_table', 5);
+-- INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+-- (1, '2014_10_12_100000_create_password_resets_table', 1),
+-- (2, '2018_03_29_145704_create_loc_countries_table', 1),
+-- (3, '2018_03_29_145323_create_loc_cities_table', 2),
+-- (4, '2018_03_27_103717_create_locations_table', 3),
+-- (5, '2018_03_25_125038_create_users_table', 4),
+-- (6, '2018_04_02_233947_create_articles_table', 5);
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- Table structure for table `password_resets`
 --
 
-CREATE TABLE `password_resets` (
+CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
@@ -65,7 +66,7 @@ CREATE TABLE `password_resets` (
 -- Table structure for table `loc_countries`
 --
 
-CREATE TABLE `loc_countries` (
+CREATE TABLE IF NOT EXISTS `loc_countries` (
   `id` int(10) UNSIGNED NOT NULL,
   `country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -88,7 +89,7 @@ INSERT INTO `loc_countries` (`id`, `country`, `created_at`, `updated_at`, `delet
 -- Table structure for table `loc_cities`
 --
 
-CREATE TABLE `loc_cities` (
+CREATE TABLE IF NOT EXISTS `loc_cities` (
   `id` int(10) UNSIGNED NOT NULL,
   `city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `country_id` int(10) UNSIGNED NOT NULL,
@@ -116,7 +117,7 @@ INSERT INTO `loc_cities` (`id`, `city`, `country_id`, `created_at`, `updated_at`
 -- Table structure for table `locations`
 --
 
-CREATE TABLE `locations` (
+CREATE TABLE IF NOT EXISTS `locations` (
   `id` int(10) UNSIGNED NOT NULL,
   `street_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `city_id` int(10) UNSIGNED NOT NULL,
@@ -141,7 +142,7 @@ INSERT INTO `locations` (`id`, `street_address`, `city_id`, `created_at`, `updat
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -215,7 +216,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 -- Table structure for table `articles`
 --
 
-CREATE TABLE `articles` (
+CREATE TABLE IF NOT EXISTS `articles` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,

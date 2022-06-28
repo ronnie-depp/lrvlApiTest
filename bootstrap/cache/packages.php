@@ -6,13 +6,6 @@
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     ),
   ),
-  'laravel/tinker' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    ),
-  ),
   'laravel-doctrine/migrations' => 
   array (
     'providers' => 
@@ -31,6 +24,13 @@
       'Registry' => 'LaravelDoctrine\\ORM\\Facades\\Registry',
       'Doctrine' => 'LaravelDoctrine\\ORM\\Facades\\Doctrine',
       'EntityManager' => 'LaravelDoctrine\\ORM\\Facades\\EntityManager',
+    ),
+  ),
+  'laravel/tinker' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
   'nunomaduro/collision' => 
