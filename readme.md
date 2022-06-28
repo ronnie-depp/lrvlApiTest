@@ -1,5 +1,9 @@
 # API Test (Laravel 5.6.40)
 <img src="lrvlApiTest_home.png">
+http://localhost:1920/
+
+<img src="lrvlApiTest_localhost_articles.png">
+http://localhost:1920/articles
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
